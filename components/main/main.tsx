@@ -7,68 +7,71 @@ export default function Main() {
   return (
     <main className="bg-[#f5f3ee]">
       {/* HERO */}
-      <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
-        
-        {/* Background Image */}
-        <Image
-          src={mainImage}
-          alt="Decipher bookstore interior"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+<section className="relative h-screen min-h-[680px] w-full overflow-hidden">
 
-        {/* Very subtle overlay */}
-        <div className="absolute inset-0 bg-black/10" />
+{/* Background Image */}
+<Image
+  src={mainImage}
+  alt="Decipher bookstore interior"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover object-center"
+/>
 
-        {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col justify-end">
+{/* Darker / muted overlay */}
+<div className="absolute inset-0 bg-black/30" />
 
-          <div className="mx-auto w-full max-w-[1440px] px-6 pb-24 sm:px-10 lg:px-16 lg:pb-28">
+{/* Hero Content */}
+<div className="absolute inset-0 flex items-center justify-center">
 
-            {/* Small label */}
-            <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-white/75">
-              Independent Bookshop · Islamabad
-            </p>
+  <div className="flex flex-col items-center px-6 text-center">
 
-            {/* Main heading */}
-            <h1 className="max-w-[850px] font-serif text-[clamp(4rem,9vw,9rem)] font-medium leading-[0.82] tracking-[-0.065em] text-white">
-              Books for
-              <br />
-              <span className="italic">
-                curious minds.
-              </span>
-            </h1>
+    {/* Heading */}
+    <h1
+      className="
+        max-w-[900px]
+        font-serif
+        text-[clamp(4rem,9vw,9rem)]
+        font-medium
+        leading-[0.85]
+        tracking-[-0.065em]
+        text-white
+      "
+    >
+      Books for
+      <br />
+      <span className="italic">
+        curious minds.
+      </span>
+    </h1>
 
-            {/* Bottom information */}
-            <div className="mt-10 flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
+    {/* Explore button */}
+    <Link
+      href="#latest"
+      className="
+        mt-10
+        border
+        border-white/70
+        px-6
+        py-3
+        text-[10px]
+        uppercase
+        tracking-[0.18em]
+        text-white
+        transition-all
+        duration-300
+        hover:bg-white
+        hover:text-[#2b2119]
+      "
+    >
+      Explore Collection ↓
+    </Link>
 
+  </div>
 
+</div>
 
-              <Link
-                href="#latest"
-                className="
-                  w-fit
-                  border-b
-                  border-white/70
-                  pb-1.5
-                  text-[10px]
-                  uppercase
-                  tracking-[0.16em]
-                  text-white
-                  transition-opacity
-                  duration-300
-                  hover:opacity-50
-                "
-              >
-                Explore collection ↓
-              </Link>
-
-            </div>
-
-          </div>
-        </div>
 
         {/* Bottom scrolling strip */}
         {/* Moving marquee */}
